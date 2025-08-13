@@ -20,10 +20,23 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.0',
     requires = {'nvim-lua/plenary.nvim'}
     }
   use 'christoomey/vim-tmux-navigator'
+  use {
+  'folke/which-key.nvim',
+   config = function()
+     require("which-key").setup {}
+   end
+  }
+  use {
+  "greggh/claude-code.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  config = function()
+    require("claude-code").setup()
+  end,
+  }
+
   
   -- My plugins here
   -- use 'foo1/bar1.nvim'
