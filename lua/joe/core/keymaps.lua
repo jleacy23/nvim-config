@@ -30,3 +30,7 @@ keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to clipboard" })
 keymap.set({"n", "v"}, "<leader>p", '"+p', { desc = "Paste from clipboard" })
 keymap.set("n", "<leader>P", '"+P', { desc = "Paste before from clipboard" })
 
+-- File explorer
+keymap.set('n', '<leader>ee', ':leftabove 30vs! .<CR>', { noremap = true, silent = true })
+
+
